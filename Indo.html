@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="id" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MauKeepsake - Rencana Peluncuran Strategis 90 Hari (Luxury Theme)</title>
+    <!-- Google Fonts: Playfair Display for Luxury Serifs, Poppins for elegant clean look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            white: '#FFFFFF',
+                            beigeLight: '#FAF7F2',
+                            beige: '#FAF2E8',
+                            beigeDark: '#E2D4C1',
+                            gold: '#D4AF37', // Luxury Gold
+                            goldDark: '#AA8232',
+                            black: '#111111', // Deep Luxury Black
+                            blackLighter: '#1C1C1C',
+                            gray: '#555555'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        sans: ['Poppins', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #FAF7F2;
+            color: #111111;
+        }
+        .elegant-title {
+            font-family: 'Playfair Display', serif;
+        }
+        /* Custom premium scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAF7F2;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 4px;
+        }
+        /* Custom styles for checked milestones */
+        .milestone-checked {
+            text-decoration: line-through;
+            color: #AA8232;
+            opacity: 0.75;
+        }
+        /* Printing Layout Optimization */
+        @media print {
+            body {
+                background: white !important;
+                color: black !important;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .print-page-break {
+                page-break-before: always;
+            }
+            .shadow-lg, .shadow-xl, .shadow-md, .shadow-sm {
+                box-shadow: none !important;
+                border: 1px solid #d8c3a5 !important;
+            }
+            .bg-brand-black {
+                background-color: #111111 !important;
+                color: white !important;
+            }
+            .bg-brand-beigeLight {
+                background-color: #ffffff !important;
+            }
+            .bg-brand-beige {
+                background-color: #FAF7F2 !important;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased">
+
+    <!-- Top Action Bar (Floating & Non-Printable) -->
+    <div class="no-print sticky top-0 z-50 bg-brand-black text-brand-white shadow-md py-3 px-4 md:px-8 flex justify-between items-center border-b border-brand-gold/30">
+        <div class="flex items-center space-x-3">
+            <span class="text-brand-gold text-2xl font-serif font-bold tracking-wider">MauKeepsake</span>
+            <span class="hidden md:inline-block text-xs bg-brand-gold text-brand-black px-2.5 py-0.5 rounded-full font-bold">Rencana Peluncuran 90 Hari</span>
+        </div>
+        <div class="flex items-center gap-3">
+            <button onclick="window.print()" class="bg-brand-gold hover:bg-brand-goldDark text-brand-black hover:text-brand-white font-bold px-4 py-2 rounded-lg text-sm transition-all flex items-center gap-2 shadow-md">
+                <i class="fas fa-print"></i>
+                Ekspor PDF / Cetak Rencana
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <main class="flex-grow container mx-auto px-4 py-8 md:py-12 max-w-6xl">
+        
+        <!-- Brand Hero Header -->
+        <header class="text-center mb-12 border-b border-brand-beige pb-8">
+            <div class="flex justify-center mb-4">
+                <div class="w-20 h-20 rounded-full border-2 border-brand-gold flex items-center justify-center bg-brand-black shadow-lg">
+                    <span class="text-brand-gold text-3xl font-serif font-bold">M</span>
+                </div>
+            </div>
+            <h1 class="elegant-title text-4xl md:text-5xl font-bold text-brand-black mb-3">MauKeepsake</h1>
+            <p class="text-brand-gold text-lg md:text-xl font-medium tracking-wide">Rencana Strategis Peluncuran Bisnis Komprehensif di Indonesia (90 Hari)</p>
+            <div class="mt-4 flex flex-wrap justify-center gap-2 text-xs font-semibold text-gray-700">
+                <span class="bg-brand-beige px-3 py-1 rounded-full"><i class="fas fa-map-marker-alt text-brand-gold mr-1"></i> Indonesia</span>
+                <span class="bg-brand-beige px-3 py-1 rounded-full"><i class="fas fa-gem text-brand-gold mr-1"></i> Keepsake Undangan Premium & Kustom</span>
+                <span class="bg-brand-beige px-3 py-1 rounded-full"><i class="fas fa-history text-brand-gold mr-1"></i> Jalur Mingguan Presisi</span>
+                <span class="bg-brand-beige px-3 py-1 rounded-full"><i class="fas fa-users text-brand-gold mr-1"></i> Jaringan Kemitraan B2B2C</span>
+            </div>
+        </header>
+
+        <!-- SECTION 1: Interactive 90-Day Roadmap (Month & Week Switcher) -->
+        <section class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-brand-beige mb-12">
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-8 gap-4 border-b border-brand-beige pb-6">
+                <div>
+                    <h2 class="text-2xl font-bold text-brand-black flex items-center gap-2">
+                        <i class="fas fa-calendar-check text-brand-gold"></i>
+                        Panduan Eksekusi Mingguan Interaktif
+                    </h2>
+                    <p class="text-sm text-gray-500 mt-1">Klik pada tab bulan untuk melihat tujuan strategis dan rencana aktivitas mingguan secara mendalam.</p>
+                </div>
+                <!-- Interactive Month Selector -->
+                <div class="no-print flex gap-2 bg-brand-beigeLight p-1 rounded-xl border border-brand-beigeDark">
+                    <button onclick="switchMonthPlan('m1')" id="m-btn-m1" class="month-tab-btn active bg-brand-black text-brand-white font-bold px-4 py-2 rounded-lg text-xs transition-all">Bulan 1: Fondasi & Edukasi</button>
+                    <button onclick="switchMonthPlan('m2')" id="m-btn-m2" class="month-tab-btn text-gray-600 hover:text-brand-black font-bold px-4 py-2 rounded-lg text-xs transition-all">Bulan 2: Kredibilitas & Kualitas</button>
+                    <button onclick="switchMonthPlan('m3')" id="m-btn-m3" class="month-tab-btn text-gray-600 hover:text-brand-black font-bold px-4 py-2 rounded-lg text-xs transition-all">Bulan 3: Konversi & Skala</button>
+                </div>
+            </div>
+
+            <!-- Month 1 Detailed View -->
+            <div id="month-plan-m1" class="month-content-block block space-y-6">
+                <div class="bg-brand-beigeLight p-4 rounded-2xl border-l-4 border-brand-gold mb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block mb-1">Fokus Utama Bulan Pertama:</span>
+                        <h3 class="text-lg font-bold text-brand-black">Membangun Saluran Komunikasi & Edukasi Pasar Tentang Konsep Baru</h3>
+                    </div>
+                    <div class="bg-white px-4 py-2 rounded-xl shadow-sm text-center">
+                        <span class="text-[10px] text-gray-400 uppercase tracking-wider block">Target Penjualan</span>
+                        <span class="text-lg font-bold text-brand-gold">5 Pesanan Uji Coba</span>
+                    </div>
+                </div>
+
+                <!-- Weeks Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Week 1 -->
+                    <div class="bg-white p-5 rounded-2xl border border-brand-beige hover:border-brand-gold shadow-sm transition-all">
+                        <span class="text-xs font-bold text-brand-gold tracking-widest uppercase block mb-1">Minggu 1 (Hari 1-7)</span>
+                        <h4 class="font-bold text-brand-black text-sm mb-3">Persiapan Teknis & Kredibilitas Visual</h4>
+                        <ul class="text-xs text-gray-600 space-y-2.5">
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> Optimalisasi profil Instagram dan TikTok dengan identitas visual & bio bernuansa mewah.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> Pembuatan katalog produk dan daftar harga di WhatsApp Business beserta template balasan otomatis yang elegan.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> Aktivasi Google Business Profile (GBP) untuk mengukuhkan reputasi lokal dan memudahkan pencarian.</li>
+                        </ul>
+                    </div>
+                    <!-- Week 2 -->
+                    <div class="bg-white p-5 rounded-2xl border border-brand-beige hover:border-brand-gold shadow-sm transition-all">
+                        <span class="text-xs font-bold text-brand-gold tracking-widest uppercase block mb-1">Minggu 2 (Hari 8-14)</span>
+                        <h4 class="font-bold text-brand-black text-sm mb-3">Gerakan Outreach Harian & Kesadaran Merek</h4>
+                        <ul class="text-xs text-gray-600 space-y-2.5">
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> Memulai outreach harian secara konsisten: hubungi 15 kontak industri (5 fotografer, 5 WO, 5 dekorator).</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> Merilis video pengenalan produk pertama yang menjelaskan esensi keepsake undangan & manfaatnya bagi portofolio foto.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> Mengumpulkan database email dan nomor telepon mitra potensial di sekitar kota operasional Anda.</li>
+                        </ul>
+                    </div>
+                    <!-- Week 3 -->
+                    <div class="bg-white p-5 rounded-2xl border border-brand-beige hover:border-brand-gold shadow-sm transition-all">
+                        <span class="text-xs font-bold text-brand-gold tracking-widest uppercase block mb-1">Minggu 3 (Hari 15-21)</span>
+                        <h4 class="font-bold text-brand-black text-sm mb-3">Kemitraan Rujukan & Distribusi Sampel Produk</h4>
+                        <ul class="text-xs text-gray-600 space-y-2.5">
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> Rekrut 10 mitra rujukan aktif pertama dan kirimkan sampel pajangan gratis untuk dipajang di studio/kantor mereka.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> Mengirimkan e-Catalog interaktif berformat premium yang merinci skema komisi rujukan bagi fotografer & WO.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> Memantau dan meningkatkan respons chat WhatsApp agar prospek tidak menunggu terlalu lama.</li>
+                        </ul>
+                    </div>
+                    <!-- Week 4 -->
+                    <div class="bg-white p-5 rounded-2xl border border-brand-beige hover:border-brand-gold shadow-sm transition-all">
+                        <span class="text-xs font-bold text-brand-gold tracking-widest uppercase block mb-1">Minggu 4 (Hari 22-30)</span>
+                        <h4 class="font-bold text-brand-black text-sm mb-3">Mengamankan Pesanan Pertama & Evaluasi Produksi</h4>
+                        <ul class="text-xs text-gray-600 space-y-2.5">
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> Mengunci 5 pesanan berbayar pertama melalui rekomendasi mitra rujukan maupun pesan organik media sosial.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> Evaluasi menyeluruh proses produksi: dari tenggat desain, ketersediaan bahan, hingga kecepatan pengiriman kurir lokal.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> Mengumpulkan ulasan (review) dari pelanggan pertama dan mengunggahnya ke Google Maps untuk membangun reputasi.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Month 2 Detailed View (Hidden by default) -->
+            <div id="month-plan-m2" class="month-content-block hidden space-y-6">
+                <div class="bg-brand-black text-brand-white p-4 rounded-2xl border-l-4 border-brand-gold mb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block mb-1">Fokus Utama Bulan Kedua:</span>
+                        <h3 class="text-lg font-bold text-brand-white">Membangun Kredibilitas Mendalam Melalui Kualitas Bahan & Pengiriman Aman</h3>
+                    </div>
+                    <div class="bg-brand-blackLighter px-4 py-2 rounded-xl shadow-sm text-center border border-white/10">
+                        <span class="text-[10px] text-gray-400 uppercase tracking-wider block">Target Penjualan</span>
+                        <span class="text-lg font-bold text-brand-gold">15-20 Pesanan</span>
+                    </div>
+                </div>
+
+                <!-- Weeks Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Week 5 -->
+                    <div class="bg-white p-5 rounded-2xl border border-brand-beige hover:border-brand-gold shadow-sm transition-all">
+                        <span class="text-xs font-bold text-brand-gold tracking-widest uppercase block mb-1">Minggu 5 (Hari 31-37)</span>
+                        <h4 class="font-bold text-brand-black text-sm mb-3">Menonjolkan Kualitas Bahan Baku & Detail Estetis</h4>
+                        <ul class="text-xs text-gray-600 space-y-2.5">
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> Mempublikasikan video makro yang memfokuskan pada ketebalan kertas, tekstur serat, dan keindahan cetak emas.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> Menunjukkan proses pengerjaan manual (handcrafted) untuk membuktikan nilai seni dan dedikasi di tiap produk.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> Menyediakan opsi tambahan kertas bebas asam (acid-free) berkualitas tinggi yang tahan kelembaban tropis.</li>
+                        </ul>
+                    </div>
+                    <!-- Week 6 -->
+                    <div class="bg-white p-5 rounded-2xl border border-brand-beige hover:border-brand-gold shadow-sm transition-all">
+                        <span class="text-xs font-bold text-brand-gold tracking-widest uppercase block mb-1">Minggu 6 (Hari 38-44)</span>
+                        <h4 class="font-bold text-brand-black text-sm mb-3">Proses Pengemasan & Kampanye Pengiriman Aman</h4>
+                        <ul class="text-xs text-gray-600 space-y-2.5">
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> Membuat konten video yang menunjukkan standar ketat pengepakan MauKeepsake (box pelindung, bubble wrap tebal).</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> Meyakinkan calon pengantin luar kota bahwa produk akan tiba dalam kondisi utuh tanpa ada kerusakan atau cacat.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> Menjalin kerja sama dengan ekspedisi pengiriman kargo dan kurir instan yang terpercaya dengan asuransi penuh.</li>
+                        </ul>
+                    </div>
+                    <!-- Week 7 -->
+                    <div class="bg-white p-5 rounded-2xl border border-brand-beige hover:border-brand-gold shadow-sm transition-all">
+                        <span class="text-xs font-bold text-brand-gold tracking-widest uppercase block mb-1">Minggu 7 (Hari 45-51)</span>
+                        <h4 class="font-bold text-brand-black text-sm mb-3">Ekspansi Jaringan Mitra Rujukan yang Aktif</h4>
+                        <ul class="text-xs text-gray-600 space-y-2.5">
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> Meningkatkan daftar rujukan aktif hingga mencapai 20 mitra, serta rutin melakukan follow up via WhatsApp.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> Memberikan apresiasi atau bingkisan kecil bagi mitra yang paling sering merekomendasikan produk Anda.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> Mengidentifikasi dan mengatasi setiap hambatan yang dirasakan mitra saat menawarkan MauKeepsake kepada klien mereka.</li>
+                        </ul>
+                    </div>
+                    <!-- Week 8 -->
+                    <div class="bg-white p-5 rounded-2xl border border-brand-beige hover:border-brand-gold shadow-sm transition-all">
+                        <span class="text-xs font-bold text-brand-gold tracking-widest uppercase block mb-1">Minggu 8 (Hari 52-60)</span>
+                        <h4 class="font-bold text-brand-black text-sm mb-3">Peluncuran Iklan Berbayar & Optimasi Respons</h4>
+                        <ul class="text-xs text-gray-600 space-y-2.5">
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> Memasang iklan Instagram Reels Ads perdana dengan anggaran terukur (Rp 1-2 juta) demi mendatangkan chat prospek.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> Memanfaatkan konten video berkinerja terbaik dari bulan pertama sebagai bahan materi iklan utama.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> Melakukan tinjauan biaya akuisisi per pelanggan (CPA) untuk mengoptimasi penawaran paket agar lebih menguntungkan.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Month 3 Detailed View (Hidden by default) -->
+            <div id="month-plan-m3" class="month-content-block hidden space-y-6">
+                <div class="bg-brand-beigeLight p-4 rounded-2xl border-l-4 border-brand-gold mb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block mb-1">Fokus Utama Bulan Ketiga:</span>
+                        <h3 class="text-lg font-bold text-brand-black">Memperkokoh Bukti Sosial, Meningkatkan Rasio Konversi, & Skala Bisnis</h3>
+                    </div>
+                    <div class="bg-white px-4 py-2 rounded-xl shadow-sm text-center">
+                        <span class="text-[10px] text-gray-400 uppercase tracking-wider block">Target Penjualan</span>
+                        <span class="text-lg font-bold text-brand-gold">30+ Pesanan Stabil</span>
+                    </div>
+                </div>
+
+                <!-- Weeks Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Week 9 -->
+                    <div class="bg-white p-5 rounded-2xl border border-brand-beige hover:border-brand-gold shadow-sm transition-all">
+                        <span class="text-xs font-bold text-brand-gold tracking-widest uppercase block mb-1">Minggu 9 (Hari 61-67)</span>
+                        <h4 class="font-bold text-brand-black text-sm mb-3">Menghimpun Bukti Sosial & Ulasan Unboxing Nyata</h4>
+                        <ul class="text-xs text-gray-600 space-y-2.5">
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> Meminta aktif video kepuasan pelanggan dan momen unboxing dari pengantin bulan pertama dan kedua.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> Membagikan tangkapan layar (screenshot) apresiasi tulus pelanggan lewat WhatsApp di story Instagram Anda.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> Memperkuat rasa percaya diri bagi pengantin baru yang ragu untuk melakukan pembayaran di muka.</li>
+                        </ul>
+                    </div>
+                    <!-- Week 10 -->
+                    <div class="bg-white p-5 rounded-2xl border border-brand-beige hover:border-brand-gold shadow-sm transition-all">
+                        <span class="text-xs font-bold text-brand-gold tracking-widest uppercase block mb-1">Minggu 10 (Hari 68-74)</span>
+                        <h4 class="font-bold text-brand-black text-sm mb-3">Kolaborasi Konten Bersama Fotografer Ternama</h4>
+                        <ul class="text-xs text-gray-600 space-y-2.5">
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> Meluncurkan postingan kolaborasi (Collab Posts) di Instagram dengan fotografer pernikahan terkemuka.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> Menarik audiens pengikut dari akun fotografer secara organik tanpa harus mengeluarkan biaya pemasaran tambahan.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> Memastikan keepsake MauKeepsake selalu menjadi properti foto wajib dalam portofolio sesi flat lay wedding mereka.</li>
+                        </ul>
+                    </div>
+                    <!-- Week 11 -->
+                    <div class="bg-white p-5 rounded-2xl border border-brand-beige hover:border-brand-gold shadow-sm transition-all">
+                        <span class="text-xs font-bold text-brand-gold tracking-widest uppercase block mb-1">Minggu 11 (Hari 75-81)</span>
+                        <h4 class="font-bold text-brand-black text-sm mb-3">Optimasi Anggaran Iklan & Alur Chat WhatsApp</h4>
+                        <ul class="text-xs text-gray-600 space-y-2.5">
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> Meningkatkan anggaran iklan untuk konten Reels dengan rasio konversi tertinggi, dan menonaktifkan iklan kurang produktif.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> Mempersingkat proses diskusi desain di WhatsApp agar transaksi berlangsung cepat dan efisien.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> Melatih staf admin atau CS agar mahir menangani keberatan pembeli dan menawarkan up-sell paket mewah.</li>
+                        </ul>
+                    </div>
+                    <!-- Week 12 -->
+                    <div class="bg-white p-5 rounded-2xl border border-brand-beige hover:border-brand-gold shadow-sm transition-all">
+                        <span class="text-xs font-bold text-brand-gold tracking-widest uppercase block mb-1">Minggu 12 (Hari 82-90)</span>
+                        <h4 class="font-bold text-brand-black text-sm mb-3">Apresiasi Mitra Rujukan & Keberlanjutan Bisnis</h4>
+                        <ul class="text-xs text-gray-600 space-y-2.5">
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> Membagaikan komisi rujukan tambahan atau kenang-kenangan MauKeepsake gratis untuk mitra berkinerja terbaik.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> Mempertahankan dan mengunci posisi minimal 30 pesanan bulanan yang stabil sebagai standar bisnis sehat.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> Mulai merumuskan rencana perluasan jaringan kemitraan rujukan ke kota-kota besar baru di Indonesia.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Gamified 90-Day Milestone Checkpoints (Interactive Tracking) -->
+        <section class="bg-brand-black text-brand-white p-6 md:p-8 rounded-3xl mb-12 shadow-md border border-brand-gold/20">
+            <div class="max-w-3xl mx-auto text-center mb-8">
+                <span class="text-xs font-extrabold text-brand-gold tracking-widest uppercase bg-brand-black border border-brand-gold px-3 py-1 rounded-full">SISTEM MONITORING INTERAKTIF</span>
+                <h2 class="text-2xl md:text-3xl font-bold mt-3 mb-2">Pencapaian Penting Peta Jalan 90 Hari (12 Milestones)</h2>
+                <p class="text-xs text-gray-300 leading-relaxed">
+                    Centang tugas-tugas penting yang telah Anda selesaikan untuk memantau kemajuan peluncuran bisnis MauKeepsake di pasar Indonesia.
+                </p>
+            </div>
+
+            <!-- Tracker Checklist Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                <!-- Checkpoint 1 -->
+                <label class="bg-brand-blackLighter p-4 rounded-xl border border-white/10 hover:border-brand-gold flex gap-3 cursor-pointer items-start select-none transition-all">
+                    <input type="checkbox" class="milestone-box w-5 h-5 accent-brand-gold rounded mt-0.5" onchange="calculateMilestoneProgress()">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block">Optimasi Profil & Katalog</span>
+                        <p class="text-[10px] text-gray-400 mt-0.5">Instagram, TikTok, dan katalog WhatsApp Business lengkap dengan foto premium dan rincian harga yang jelas.</p>
+                    </div>
+                </label>
+                <!-- Checkpoint 2 -->
+                <label class="bg-brand-blackLighter p-4 rounded-xl border border-white/10 hover:border-brand-gold flex gap-3 cursor-pointer items-start select-none transition-all">
+                    <input type="checkbox" class="milestone-box w-5 h-5 accent-brand-gold rounded mt-0.5" onchange="calculateMilestoneProgress()">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block">Aktivasi Profil Google Bisnis</span>
+                        <p class="text-[10px] text-gray-400 mt-0.5">Memiliki profil bisnis aktif yang terverifikasi di Google Maps untuk reputasi lokal dan pengumpulan testimoni.</p>
+                    </div>
+                </label>
+                <!-- Checkpoint 3 -->
+                <label class="bg-brand-blackLighter p-4 rounded-xl border border-white/10 hover:border-brand-gold flex gap-3 cursor-pointer items-start select-none transition-all">
+                    <input type="checkbox" class="milestone-box w-5 h-5 accent-brand-gold rounded mt-0.5" onchange="calculateMilestoneProgress()">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block">10 Mitra Rujukan Aktif</span>
+                        <p class="text-[10px] text-gray-400 mt-0.5">Menjalin kesepakatan kemitraan promosi rujukan dengan 10 fotografer profesional maupun Wedding Organizer lokal.</p>
+                    </div>
+                </label>
+                <!-- Checkpoint 4 -->
+                <label class="bg-brand-blackLighter p-4 rounded-xl border border-white/10 hover:border-brand-gold flex gap-3 cursor-pointer items-start select-none transition-all">
+                    <input type="checkbox" class="milestone-box w-5 h-5 accent-brand-gold rounded mt-0.5" onchange="calculateMilestoneProgress()">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block">Pendistribusian Sampel Fisik</span>
+                        <p class="text-[10px] text-gray-400 mt-0.5">Mengirimkan sampel papan pajangan secara gratis kepada mitra aktif sebagai contoh properti sesi foto pengantin.</p>
+                    </div>
+                </label>
+                <!-- Checkpoint 5 -->
+                <label class="bg-brand-blackLighter p-4 rounded-xl border border-white/10 hover:border-brand-gold flex gap-3 cursor-pointer items-start select-none transition-all">
+                    <input type="checkbox" class="milestone-box w-5 h-5 accent-brand-gold rounded mt-0.5" onchange="calculateMilestoneProgress()">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block">Meraih 5 Pesanan Pertama</span>
+                        <p class="text-[10px] text-gray-400 mt-0.5">Mengamankan 5 pesanan berbayar perdana dari rujukan mitra aktif atau promosi organik media sosial.</p>
+                    </div>
+                </label>
+                <!-- Checkpoint 6 -->
+                <label class="bg-brand-blackLighter p-4 rounded-xl border border-white/10 hover:border-brand-gold flex gap-3 cursor-pointer items-start select-none transition-all">
+                    <input type="checkbox" class="milestone-box w-5 h-5 accent-brand-gold rounded mt-0.5" onchange="calculateMilestoneProgress()">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block">Video BTS Produksi Pertama</span>
+                        <p class="text-[10px] text-gray-400 mt-0.5">Mengunggah konten behind the scenes proses pengerjaan manual yang mendapat interaksi tinggi di Instagram.</p>
+                    </div>
+                </label>
+                <!-- Checkpoint 7 -->
+                <label class="bg-brand-blackLighter p-4 rounded-xl border border-white/10 hover:border-brand-gold flex gap-3 cursor-pointer items-start select-none transition-all">
+                    <input type="checkbox" class="milestone-box w-5 h-5 accent-brand-gold rounded mt-0.5" onchange="calculateMilestoneProgress()">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block">Sistem Packing & Kiriman Aman</span>
+                        <p class="text-[10px] text-gray-400 mt-0.5">Standar ketat pengepakan aman terbukti andal mengirimkan produk ke luar kota tanpa keluhan pecah atau rusak.</p>
+                    </div>
+                </label>
+                <!-- Checkpoint 8 -->
+                <label class="bg-brand-blackLighter p-4 rounded-xl border border-white/10 hover:border-brand-gold flex gap-3 cursor-pointer items-start select-none transition-all">
+                    <input type="checkbox" class="milestone-box w-5 h-5 accent-brand-gold rounded mt-0.5" onchange="calculateMilestoneProgress()">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block">Iklan Reels Perdana Berjalan</span>
+                        <p class="text-[10px] text-gray-400 mt-0.5">Mempublikasikan iklan Instagram Reels dengan objektif masuk pesan WhatsApp dan memantau responsnya harian.</p>
+                    </div>
+                </label>
+                <!-- Checkpoint 9 -->
+                <label class="bg-brand-blackLighter p-4 rounded-xl border border-white/10 hover:border-brand-gold flex gap-3 cursor-pointer items-start select-none transition-all">
+                    <input type="checkbox" class="milestone-box w-5 h-5 accent-brand-gold rounded mt-0.5" onchange="calculateMilestoneProgress()">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block">Video Testimoni Unboxing</span>
+                        <p class="text-[10px] text-gray-400 mt-0.5">Mendapatkan video unboxing estetik dari pengantin asli yang mengekspresikan kepuasan mendalam mereka.</p>
+                    </div>
+                </label>
+                <!-- Checkpoint 10 -->
+                <label class="bg-brand-blackLighter p-4 rounded-xl border border-white/10 hover:border-brand-gold flex gap-3 cursor-pointer items-start select-none transition-all">
+                    <input type="checkbox" class="milestone-box w-5 h-5 accent-brand-gold rounded mt-0.5" onchange="calculateMilestoneProgress()">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block">Postingan Kolaborasi Instagram</span>
+                        <p class="text-[10px] text-gray-400 mt-0.5">Membuat Collab Post bersama fotografer ternama demi mendulang kunjungan profil yang sangat bertarget.</p>
+                    </div>
+                </label>
+                <!-- Checkpoint 11 -->
+                <label class="bg-brand-blackLighter p-4 rounded-xl border border-white/10 hover:border-brand-gold flex gap-3 cursor-pointer items-start select-none transition-all">
+                    <input type="checkbox" class="milestone-box w-5 h-5 accent-brand-gold rounded mt-0.5" onchange="calculateMilestoneProgress()">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block">Jaringan 20 Mitra Aktif</span>
+                        <p class="text-[10px] text-gray-400 mt-0.5">Memiliki 20 mitra industri pernikahan aktif yang secara rutin merekomendasikan produk Anda kepada kliennya.</p>
+                    </div>
+                </label>
+                <!-- Checkpoint 12 -->
+                <label class="bg-brand-blackLighter p-4 rounded-xl border border-white/10 hover:border-brand-gold flex gap-3 cursor-pointer items-start select-none transition-all">
+                    <input type="checkbox" class="milestone-box w-5 h-5 accent-brand-gold rounded mt-0.5" onchange="calculateMilestoneProgress()">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block">Konsistensi 30+ Pesanan/Bulan</span>
+                        <p class="text-[10px] text-gray-400 mt-0.5">Mencapai kemapanan finansial dan stabilitas volume produksi dengan minimal 30 pesanan setiap bulannya.</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- Milestone Progress Bar Indicator -->
+            <div class="flex flex-col sm:flex-row justify-between items-center bg-brand-blackLighter p-4 rounded-xl border border-white/5 gap-3 text-center sm:text-left">
+                <span class="text-xs text-gray-300">
+                    Progres Peluncuran Bisnis MauKeepsake: <strong id="milestone-text" class="text-brand-gold">0 / 12</strong> (Kemajuan: <span id="milestone-percent">0%</span>)
+                </span>
+                <div class="w-full sm:w-1/2 bg-white/10 rounded-full h-3 overflow-hidden border border-white/5">
+                    <div id="milestone-bar" class="bg-brand-gold h-full w-0 transition-all duration-300"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Interactive Revenue & KPI Simulator -->
+        <section class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-brand-beige mb-12">
+            <div class="text-center md:text-left mb-6">
+                <span class="text-xs font-bold text-brand-black bg-brand-beige px-3 py-1 rounded-full uppercase">Alat Estimasi Pendapatan</span>
+                <h2 class="text-2xl font-bold text-brand-black mt-2">Kalkulator Simulasi Pendapatan Bulanan (Rupiah - IDR)</h2>
+                <p class="text-sm text-gray-500 mt-1">Ubah variabel mitra rujukan aktif, rasio rujukan, kisaran harga, dan persentase konversi untuk mensimulasikan pendapatan kotor Anda.</p>
+            </div>
+
+            <!-- Simulator Container -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Sliders Controls -->
+                <div class="bg-brand-beigeLight p-5 rounded-2xl border border-brand-beige lg:col-span-1 space-y-4">
+                    <div>
+                        <label class="text-xs font-bold text-brand-black flex justify-between mb-1">
+                            <span>Mitra Rujukan Aktif (WO & Fotografer):</span>
+                            <span id="partner-val" class="text-brand-gold font-bold">15 Mitra</span>
+                        </label>
+                        <input type="range" id="partners-range" min="5" max="50" value="15" step="1" oninput="runFinancialSimulation()" class="w-full accent-brand-gold">
+                    </div>
+
+                    <div>
+                        <label class="text-xs font-bold text-brand-black flex justify-between mb-1">
+                            <span>Rata-rata Rujukan per Mitra per Bulan:</span>
+                            <span id="referral-val" class="text-brand-black font-bold">2 Rujukan</span>
+                        </label>
+                        <input type="range" id="referrals-range" min="1" max="10" value="2" step="1" oninput="runFinancialSimulation()" class="w-full accent-brand-gold">
+                    </div>
+
+                    <div>
+                        <label class="text-xs font-bold text-brand-black flex justify-between mb-1">
+                            <span>Rata-rata Harga Jual Paket Keepsake (IDR):</span>
+                            <span id="price-val" class="text-brand-black font-bold">Rp 650.000</span>
+                        </label>
+                        <input type="range" id="price-range" min="300000" max="1500000" value="650000" step="50000" oninput="runFinancialSimulation()" class="w-full accent-brand-gold">
+                    </div>
+
+                    <div>
+                        <label class="text-xs font-bold text-brand-black flex justify-between mb-1">
+                            <span>Rasio Konversi Rujukan Menjadi Pembelian:</span>
+                            <span id="conversion-val" class="text-emerald-700 font-bold">50%</span>
+                        </label>
+                        <input type="range" id="conversion-range" min="10" max="100" value="50" step="5" oninput="runFinancialSimulation()" class="w-full accent-brand-gold">
+                    </div>
+                </div>
+
+                <!-- Simulation Output -->
+                <div class="bg-brand-black text-brand-white p-6 rounded-2xl lg:col-span-2 flex flex-col justify-between border border-brand-gold/30">
+                    <div>
+                        <h4 class="text-sm font-bold text-brand-gold mb-4 border-b border-white/10 pb-2"><i class="fas fa-chart-line mr-1"></i> Proyeksi Output Keuangan & Volume Pesanan Bulanan</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+                            <div class="bg-brand-blackLighter p-4 rounded-xl border border-white/5">
+                                <span class="text-[10px] text-gray-400 uppercase tracking-wider block">Total Prospek Masuk</span>
+                                <span id="out-total-referrals" class="text-xl font-bold text-brand-gold block mt-1">30 Rujukan</span>
+                            </div>
+                            <div class="bg-brand-blackLighter p-4 rounded-xl border border-white/5">
+                                <span class="text-[10px] text-gray-400 uppercase tracking-wider block">Pesanan Terkonfirmasi</span>
+                                <span id="out-sales-count" class="text-xl font-bold text-white block mt-1">15 Pesanan</span>
+                            </div>
+                            <div class="bg-brand-blackLighter p-4 rounded-xl border border-white/5">
+                                <span class="text-[10px] text-gray-400 uppercase tracking-wider block">Estimasi Pendapatan Kotor</span>
+                                <span id="out-total-revenue" class="text-xl font-bold text-brand-gold block mt-1">Rp 9.750.000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Strategic Advice -->
+                    <div class="mt-6 pt-4 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-3">
+                        <p class="text-xs text-gray-300 leading-normal text-justify sm:w-3/4">
+                            💡 <strong>Rekomendasi Penting:</strong> Peluncuran 90 hari ditargetkan untuk mendatangkan minimal 20-30 mitra aktif guna membebaskan ketergantungan bisnis Anda dari dinamika algoritma media sosial yang tidak menentu.
+                        </p>
+                        <div class="bg-brand-gold text-brand-black font-bold text-xs px-3 py-1.5 rounded-lg shrink-0">
+                            Model Bisnis Stabil & Profitabel
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Weekly Content Calendar Schedule -->
+        <section class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-brand-beige mb-12">
+            <h2 class="text-2xl font-bold text-brand-black mb-6 text-center md:text-left flex items-center gap-2">
+                <i class="fas fa-calendar-alt text-brand-gold"></i>
+                Matriks Rencana Distribusi Konten Mingguan
+            </h2>
+            
+            <div class="overflow-x-auto rounded-xl border border-brand-beige">
+                <table class="w-full text-left border-collapse min-w-[750px]">
+                    <thead>
+                        <tr class="bg-brand-black text-brand-white text-xs">
+                            <th class="p-3 border-b border-brand-beige">Hari</th>
+                            <th class="p-3 border-b border-brand-beige">Format Konten Video (Instagram Reel / TikTok)</th>
+                            <th class="p-3 border-b border-brand-beige">Rencana Konten Story Harian (Minimal 2)</th>
+                            <th class="p-3 border-b border-brand-beige">Target & Objektif Konten</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-xs text-gray-700 divide-y divide-brand-beige">
+                        <tr class="hover:bg-brand-beigeLight">
+                            <td class="p-3 font-bold text-brand-black">Senin</td>
+                            <td class="p-3">Mengapa pajangan keepsake undangan ini bukan ditujukan untuk dibagikan ke semua tamu?</td>
+                            <td class="p-3">1. Di balik layar pemilihan kayu frame <br>2. Polling interaktif pilihan desain audiens</td>
+                            <td class="p-3"><span class="bg-yellow-50 text-yellow-800 border border-yellow-200 px-2 py-0.5 rounded font-bold">Edukasi Pasar</span></td>
+                        </tr>
+                        <tr class="hover:bg-brand-beigeLight">
+                            <td class="p-3 font-bold text-brand-black">Selasa</td>
+                            <td class="p-3">Perbandingan detail visual: Undangan standar kertas biasa vs MauKeepsake Undangan Mewah</td>
+                            <td class="p-3">1. Foto detail close up serat premium kertas <br>2. Sesi tanya jawab seputar produk keepsake</td>
+                            <td class="p-3"><span class="bg-brand-beige text-brand-black px-2 py-0.5 rounded font-bold">Keindahan Visual</span></td>
+                        </tr>
+                        <tr class="hover:bg-brand-beigeLight">
+                            <td class="p-3 font-bold text-brand-black">Rabu</td>
+                            <td class="p-3">Proses Handmade: Di balik layar penataan bunga kering estetik & pengerjaan manual</td>
+                            <td class="p-3">1. Cuplikan proses potong kertas presisi <br>2. Membagikan ulasan kepuasan klien pertama</td>
+                            <td class="p-3"><span class="bg-stone-100 text-stone-800 px-2 py-0.5 rounded font-bold">Behind the Scenes</span></td>
+                        </tr>
+                        <tr class="hover:bg-brand-beigeLight">
+                            <td class="p-3 font-bold text-brand-black">Kamis</td>
+                            <td class="p-3">Ide Inspirasi: Cara membuat dokumentasi detail pernikahan Anda tampak mewah maksimal</td>
+                            <td class="p-3">1. Membagikan portofolio dari fotografer mitra <br>2. Tip singkat seputar persiapan hari pernikahan</td>
+                            <td class="p-3"><span class="bg-emerald-50 text-emerald-800 border border-emerald-200 px-2 py-0.5 rounded font-bold">Konten Edukatif</span></td>
+                        </tr>
+                        <tr class="hover:bg-brand-beigeLight">
+                            <td class="p-3 font-bold text-brand-black">Jumat</td>
+                            <td class="p-3">Menonjolkan kemewahan Paket Luxury: Pemanis pita satin serta box kado eksklusif</td>
+                            <td class="p-3">1. Detail kilau pita satin sutra premium <br>2. Cuplikan pesanan siap meluncur dikirim</td>
+                            <td class="p-3"><span class="bg-brand-beige text-brand-black px-2 py-0.5 rounded font-bold">Promosi Produk</span></td>
+                        </tr>
+                        <tr class="hover:bg-brand-beigeLight">
+                            <td class="p-3 font-bold text-brand-black">Sabtu</td>
+                            <td class="p-3">Kisah hangat pengantin yang begitu bahagia saat menerima keepsake indah mereka</td>
+                            <td class="p-3">1. Screenshot pesan kepuasan via WhatsApp <br>2. Ajakan pesan instan langsung klik tautan bio</td>
+                            <td class="p-3"><span class="bg-purple-50 text-purple-800 border border-purple-200 px-2 py-0.5 rounded font-bold">Bukti Sosial</span></td>
+                        </tr>
+                        <tr class="hover:bg-brand-beigeLight bg-brand-beigeLight/40">
+                            <td class="p-3 font-bold text-brand-black">Minggu</td>
+                            <td class="p-3 text-gray-500 italic">Evaluasi kinerja mingguan, riset ide visual, dan persiapan produksi konten berikutnya.</td>
+                            <td class="p-3">1. Interaksi ringan santai dengan audiens <br>2. Teaser sekilas pengerjaan desain anyar esok hari</td>
+                            <td class="p-3"><span class="bg-gray-100 text-gray-800 px-2 py-0.5 rounded font-bold">Santai & Interaksi</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- SECTION 5: Interactive Daily Priority Checklist -->
+        <section class="bg-brand-beigeLight p-6 md:p-8 rounded-3xl shadow-sm border border-brand-beige mb-12">
+            <div class="text-center md:text-left mb-6">
+                <span class="text-xs font-bold text-brand-gold bg-brand-black px-3 py-1 rounded-full uppercase">DAFTAR KINERJA HARIAN</span>
+                <h2 class="text-2xl font-bold text-brand-black mt-2">Daftar Checklist Prioritas Tugas Harian Bisnis</h2>
+                <p class="text-sm text-gray-500 mt-1">Centang daftar tugas harian Anda hari ini untuk memastikan progres pertumbuhan berjalan konsisten.</p>
+            </div>
+
+            <!-- Tasks Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Task 1 -->
+                <label class="bg-white p-4 rounded-xl border border-brand-beige hover:border-brand-gold flex gap-3 cursor-pointer items-start select-none transition-all">
+                    <input type="checkbox" class="task-checkbox w-5 h-5 accent-brand-gold rounded mt-0.5" onchange="toggleTaskCard(this)">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block">Outreach Fotografer</span>
+                        <p class="text-xs text-gray-700 font-medium mt-0.5">Menghubungi 5 fotografer pernikahan lokal baru untuk penawaran program rujukan.</p>
+                    </div>
+                </label>
+                <!-- Task 2 -->
+                <label class="bg-white p-4 rounded-xl border border-brand-beige hover:border-brand-gold flex gap-3 cursor-pointer items-start select-none transition-all">
+                    <input type="checkbox" class="task-checkbox w-5 h-5 accent-brand-gold rounded mt-0.5" onchange="toggleTaskCard(this)">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block">Outreach WO</span>
+                        <p class="text-xs text-gray-700 font-medium mt-0.5">Menghubungi 5 Wedding Organizer (WO) baru untuk menawarkan katalog paket.</p>
+                    </div>
+                </label>
+                <!-- Task 3 -->
+                <label class="bg-white p-4 rounded-xl border border-brand-beige hover:border-brand-gold flex gap-3 cursor-pointer items-start select-none transition-all">
+                    <input type="checkbox" class="task-checkbox w-5 h-5 accent-brand-gold rounded mt-0.5" onchange="toggleTaskCard(this)">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block">Distribusi Konten</span>
+                        <p class="text-xs text-gray-700 font-medium mt-0.5">Mengunggah 1 video pendek interaktif (Reel/TikTok) dan rilis minimal 2 Story.</p>
+                    </div>
+                </label>
+                <!-- Task 4 -->
+                <label class="bg-white p-4 rounded-xl border border-brand-beige hover:border-brand-gold flex gap-3 cursor-pointer items-start select-none transition-all">
+                    <input type="checkbox" class="task-checkbox w-5 h-5 accent-brand-gold rounded mt-0.5" onchange="toggleTaskCard(this)">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block">Manajemen Pesan</span>
+                        <p class="text-xs text-gray-700 font-medium mt-0.5">Merespons cepat seluruh prospek di WhatsApp Business secara ramah dan bersahabat.</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- Task Counter -->
+            <div class="mt-6 flex flex-col sm:flex-row justify-between items-center bg-white p-4 rounded-xl border border-brand-beige gap-3 text-center sm:text-left">
+                <span class="text-xs text-gray-600">
+                    Rasio penyelesaian tugas harian Anda: <strong id="progress-text" class="text-brand-gold">0 / 4</strong>
+                </span>
+                <div class="w-full sm:w-1/2 bg-gray-100 rounded-full h-3 overflow-hidden">
+                    <div id="progress-bar" class="bg-brand-gold h-full w-0 transition-all duration-300"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-brand-black text-brand-white py-10 px-4 text-center border-t border-brand-gold/20 mt-12">
+        <div class="container mx-auto max-w-4xl">
+            <span class="elegant-title text-brand-gold text-2xl font-bold tracking-widest block mb-2">MauKeepsake</span>
+            <p class="text-xs text-gray-300 max-w-xl mx-auto leading-relaxed mb-6 text-center">
+                Membangun merek kriya souvenir pernikahan premium dan personal terdepan di Indonesia, mengabadikan keindahan momen sakral sakral yang tak layu tergerus waktu.
+            </p>
+            <div class="text-[10px] text-gray-500">
+                &copy; 2026 MauKeepsake 90-Day Launch Plan. Hak cipta dilindungi undang-undang.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Script Layer -->
+    <script>
+        // Interactive Monthly Plan Tab Switcher
+        function switchMonthPlan(monthId) {
+            // Remove active style from all tab buttons
+            document.querySelectorAll('.month-tab-btn').forEach(btn => {
+                btn.classList.remove('bg-brand-black', 'text-brand-white', 'active');
+                btn.classList.add('text-gray-600', 'hover:text-brand-black');
+            });
+
+            // Add active styles to clicked tab
+            const activeBtn = document.getElementById(`m-btn-${monthId}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('text-gray-600', 'hover:text-brand-black');
+                activeBtn.classList.add('bg-brand-black', 'text-brand-white', 'active');
+            }
+
+            // Hide all month content blocks
+            document.querySelectorAll('.month-content-block').forEach(block => {
+                block.classList.add('hidden');
+                block.classList.remove('block');
+            });
+
+            // Show current month content block
+            const currentBlock = document.getElementById(`month-plan-${monthId}`);
+            if (currentBlock) {
+                currentBlock.classList.remove('hidden');
+                currentBlock.classList.add('block');
+            }
+        }
+
+        // Daily Checklist Task Handler
+        function toggleTaskCard(checkbox) {
+            const card = checkbox.closest('label');
+            if (checkbox.checked) {
+                card.classList.add('bg-brand-beige/30', 'border-brand-gold');
+            } else {
+                card.classList.remove('bg-brand-beige/30', 'border-brand-gold');
+            }
+            updateDailyProgressBar();
+        }
+
+        // Daily Progress Bar Visual Calculator
+        function updateDailyProgressBar() {
+            const checkboxes = document.querySelectorAll('.task-checkbox');
+            const totalTasks = checkboxes.length;
+            let completedTasks = 0;
+
+            checkboxes.forEach(box => {
+                if (box.checked) completedTasks++;
+            });
+
+            const progressPercentage = (completedTasks / totalTasks) * 100;
+            const progressBar = document.getElementById('progress-bar');
+            const progressText = document.getElementById('progress-text');
+
+            if (progressBar && progressText) {
+                progressBar.style.width = `${progressPercentage}%`;
+                progressText.innerText = `${completedTasks} / ${totalTasks}`;
+            }
+        }
+
+        // 90-Day Milestone Tracker Visual Calculator
+        function calculateMilestoneProgress() {
+            const checkboxes = document.querySelectorAll('.milestone-box');
+            const totalCheckpoints = checkboxes.length;
+            let completedCheckpoints = 0;
+
+            checkboxes.forEach(box => {
+                const textContainer = box.nextElementSibling;
+                if (box.checked) {
+                    completedCheckpoints++;
+                    if (textContainer) textContainer.classList.add('milestone-checked');
+                } else {
+                    if (textContainer) textContainer.classList.remove('milestone-checked');
+                }
+            });
+
+            const progressPercentage = Math.round((completedCheckpoints / totalCheckpoints) * 100);
+            const progressBar = document.getElementById('milestone-bar');
+            const progressText = document.getElementById('milestone-text');
+            const progressPercentText = document.getElementById('milestone-percent');
+
+            if (progressBar && progressText && progressPercentText) {
+                progressBar.style.width = `${progressPercentage}%`;
+                progressText.innerText = `${completedCheckpoints} / ${totalCheckpoints}`;
+                progressPercentText.innerText = `${progressPercentage}%`;
+            }
+        }
+
+        // Financial & KPI Simulator Calculator
+        function runFinancialSimulation() {
+            const partners = parseInt(document.getElementById('partners-range').value);
+            const referralsPerPartner = parseInt(document.getElementById('referrals-range').value);
+            const packagePrice = parseInt(document.getElementById('price-range').value);
+            const conversionRate = parseInt(document.getElementById('conversion-range').value) / 100;
+
+            // Update range indicators
+            document.getElementById('partner-val').innerText = `${partners} Mitra Aktif`;
+            document.getElementById('referral-val').innerText = `${referralsPerPartner} Rujukan / Mitra`;
+            document.getElementById('price-val').innerText = `Rp ${packagePrice.toLocaleString('id-ID')}`;
+            document.getElementById('conversion-val').innerText = `${(conversionRate * 100)}%`;
+
+            // Core Math
+            const totalIncomingReferrals = partners * referralsPerPartner;
+            const completedSales = Math.round(totalIncomingReferrals * conversionRate);
+            const totalRevenue = completedSales * packagePrice;
+
+            // Render Output
+            document.getElementById('out-total-referrals').innerText = `${totalIncomingReferrals} Rujukan`;
+            document.getElementById('out-sales-count').innerText = `${completedSales} Pesanan`;
+            document.getElementById('out-total-revenue').innerText = `Rp ${totalRevenue.toLocaleString('id-ID')}`;
+        }
+
+        // Initialize simulator and trackers on page load
+        window.onload = function() {
+            runFinancialSimulation();
+            calculateMilestoneProgress();
+            updateDailyProgressBar();
+        }
+    </script>
+</body>
+</html>
