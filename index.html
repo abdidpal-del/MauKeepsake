@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MauKeepsake - خطة الإطلاق الشاملة 90 يوماً</title>
+    <!-- Google Fonts: Playfair Display for Elegance, Tajawal for Beautiful Arabic Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            white: '#FFFFFF',
+                            beigeLight: '#FAF7F2',
+                            beige: '#FAF2E8',
+                            beigeDark: '#E2D4C1',
+                            gold: '#D4AF37', // Luxury Gold
+                            goldDark: '#AA8232',
+                            black: '#111111', // Deep Luxury Black
+                            blackLighter: '#1C1C1C',
+                            gray: '#555555'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                        sans: ['Tajawal', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #FAF7F2;
+            color: #111111;
+        }
+        .elegant-title {
+            font-family: 'Playfair Display', 'Tajawal', serif;
+        }
+        /* Premium custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAF7F2;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D4AF37;
+            border-radius: 4px;
+        }
+        /* Custom styles for checked milestones */
+        .milestone-checked {
+            text-decoration: line-through;
+            color: #AA8232;
+            opacity: 0.75;
+        }
+        /* Printing Layout Optimization */
+        @media print {
+            body {
+                background: white !important;
+                color: black !important;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .print-page-break {
+                page-break-before: always;
+            }
+            .shadow-lg, .shadow-xl, .shadow-md, .shadow-sm {
+                box-shadow: none !important;
+                border: 1px solid #d8c3a5 !important;
+            }
+            .bg-brand-black {
+                background-color: #111111 !important;
+                color: white !important;
+            }
+            .bg-brand-beigeLight {
+                background-color: #ffffff !important;
+            }
+            .bg-brand-beige {
+                background-color: #FAF7F2 !important;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased">
+
+    <!-- Top Action Bar (Floating & Non-Printable) -->
+    <div class="no-print sticky top-0 z-50 bg-brand-black text-brand-white shadow-md py-3 px-4 md:px-8 flex justify-between items-center border-b border-brand-gold/30">
+        <div class="flex items-center space-x-3 space-x-reverse">
+            <span class="text-brand-gold text-2xl font-serif font-bold tracking-wider">MauKeepsake</span>
+            <span class="hidden md:inline-block text-xs bg-brand-gold text-brand-black px-2.5 py-0.5 rounded-full font-bold">خطة الـ 90 يوماً الفاخرة</span>
+        </div>
+        <div class="flex items-center gap-3">
+            <button onclick="window.print()" class="bg-brand-gold hover:bg-brand-goldDark text-brand-black hover:text-brand-white font-bold px-4 py-2 rounded-lg text-sm transition-all flex items-center gap-2 shadow-md">
+                <i class="fas fa-print"></i>
+                تصدير PDF / طباعة الخطة
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <main class="flex-grow container mx-auto px-4 py-8 md:py-12 max-w-6xl">
+        
+        <!-- Brand Hero Header -->
+        <header class="text-center mb-12 border-b border-brand-beige pb-8">
+            <div class="flex justify-center mb-4">
+                <div class="w-20 h-20 rounded-full border-2 border-brand-gold flex items-center justify-center bg-brand-black shadow-lg">
+                    <span class="text-brand-gold text-3xl font-serif font-bold">M</span>
+                </div>
+            </div>
+            <h1 class="elegant-title text-4xl md:text-5xl font-bold text-brand-black mb-3">MauKeepsake</h1>
+            <p class="text-brand-gold text-lg md:text-xl font-medium tracking-wide">الخطة الاستراتيجية التفصيلية لإطلاق المشروع في السوق الإندونيسي (90 يوماً)</p>
+            <div class="mt-4 flex flex-wrap justify-center gap-2 text-xs font-semibold text-gray-700">
+                <span class="bg-brand-beige px-3 py-1 rounded-full"><i class="fas fa-map-marker-alt text-brand-gold mr-1"></i> إندونيسيا</span>
+                <span class="bg-brand-beige px-3 py-1 rounded-full"><i class="fas fa-gem text-brand-gold mr-1"></i> تذكار زفاف فاخر ومخصص</span>
+                <span class="bg-brand-beige px-3 py-1 rounded-full"><i class="fas fa-history text-brand-gold mr-1"></i> مسار أسبوعي دقيق</span>
+                <span class="bg-brand-beige px-3 py-1 rounded-full"><i class="fas fa-users text-brand-gold mr-1"></i> شبكة شركاء B2B2C</span>
+            </div>
+        </header>
+
+        <!-- SECTION 1: Interactive 90-Day Roadmap (Month & Week Switcher) -->
+        <section class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-brand-beige mb-12">
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-8 gap-4 border-b border-brand-beige pb-6">
+                <div>
+                    <h2 class="text-2xl font-bold text-brand-black flex items-center gap-2">
+                        <i class="fas fa-calendar-check text-brand-gold"></i>
+                        دليل التنفيذ الأسبوعي التفاعلي للـ 90 يوماً
+                    </h2>
+                    <p class="text-sm text-gray-500 mt-1">انقر على الشهر لاستكشاف الأهداف الاستراتيجية وتفاصيل الأنشطة لكل أسبوع على حدة.</p>
+                </div>
+                <!-- Interactive Month Selector -->
+                <div class="no-print flex gap-2 bg-brand-beigeLight p-1 rounded-xl border border-brand-beigeDark">
+                    <button onclick="switchMonthPlan('m1')" id="m-btn-m1" class="month-tab-btn active bg-brand-black text-brand-white font-bold px-4 py-2 rounded-lg text-xs transition-all">الشهر 1: التأسيس والتوعية</button>
+                    <button onclick="switchMonthPlan('m2')" id="m-btn-m2" class="month-tab-btn text-gray-600 hover:text-brand-black font-bold px-4 py-2 rounded-lg text-xs transition-all">الشهر 2: المصداقية والعمق</button>
+                    <button onclick="switchMonthPlan('m3')" id="m-btn-m3" class="month-tab-btn text-gray-600 hover:text-brand-black font-bold px-4 py-2 rounded-lg text-xs transition-all">الشهر 3: التحويل والنمو</button>
+                </div>
+            </div>
+
+            <!-- Month 1 Detailed View -->
+            <div id="month-plan-m1" class="month-content-block block space-y-6">
+                <div class="bg-brand-beigeLight p-4 rounded-2xl border-l-4 border-brand-gold mb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block mb-1">التركيز الأساسي للشهر الأول:</span>
+                        <h3 class="text-lg font-bold text-brand-black">تأسيس قنوات التواصل وتثقيف السوق بالمفهوم الجديد</h3>
+                    </div>
+                    <div class="bg-white px-4 py-2 rounded-xl shadow-sm text-center">
+                        <span class="text-[10px] text-gray-400 uppercase tracking-wider block">الهدف المبيعاتي</span>
+                        <span class="text-lg font-bold text-brand-gold">5 طلبيات تجريبية أولى</span>
+                    </div>
+                </div>
+
+                <!-- Weeks Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Week 1 -->
+                    <div class="bg-white p-5 rounded-2xl border border-brand-beige hover:border-brand-gold shadow-sm transition-all">
+                        <span class="text-xs font-bold text-brand-gold tracking-widest uppercase block mb-1">الأسبوع 1 (الأيام 1-7)</span>
+                        <h4 class="font-bold text-brand-black text-sm mb-3">التجهيز الفني والمصداقية البصرية</h4>
+                        <ul class="text-xs text-gray-600 space-y-2.5">
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> تهيئة حسابات Instagram و TikTok بالهوية البصرية والنبذة التعريفية الفخمة.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> تأسيس كتالوج الأسعار والمنتجات على WhatsApp Business وتجهيز الردود التلقائية لسرعة الإغلاق.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> إطلاق وتفعيل الملف التجاري على خرائط جوجل (Google Business Profile) لكسب الثقة المحلية.</li>
+                        </ul>
+                    </div>
+                    <!-- Week 2 -->
+                    <div class="bg-white p-5 rounded-2xl border border-brand-beige hover:border-brand-gold shadow-sm transition-all">
+                        <span class="text-xs font-bold text-brand-gold tracking-widest uppercase block mb-1">الأسبوع 2 (الأيام 8-14)</span>
+                        <h4 class="font-bold text-brand-black text-sm mb-3">حملة التواصل اليومي والوعي بالبراند</h4>
+                        <ul class="text-xs text-gray-600 space-y-2.5">
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> البدء بنظام التواصل اليومي: مكالمات ورسائل تواصل مع 15 جهة اتصال متخصصة (5 مصورين، 5 منظمين، 5 منسقين).</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> إطلاق الفيديوهات التعريفية الأولى التي تشرح ماهية Keepsake وكيف يثري ألبوم العروسين.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> تجميع قاعدة بيانات متكاملة بالبريد الإلكتروني وأرقام الاتصال لشركاء النجاح الأقرب لمنطقتك.</li>
+                        </ul>
+                    </div>
+                    <!-- Week 3 -->
+                    <div class="bg-white p-5 rounded-2xl border border-brand-beige hover:border-brand-gold shadow-sm transition-all">
+                        <span class="text-xs font-bold text-brand-gold tracking-widest uppercase block mb-1">الأسبوع 3 (الأيام 15-21)</span>
+                        <h4 class="font-bold text-brand-black text-sm mb-3">شراكات الإحالة وعينات العرض الأولى</h4>
+                        <ul class="text-xs text-gray-600 space-y-2.5">
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> جذب أول 5-10 شركاء إحالة نشطين وإرسال لوحات عينات مجانية لهم لعرضها للزبائن في مكاتبهم أو جلساتهم.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> إرسال كتيب رقمي فاخر (e-Catalog) يشرح المزايا ونظام العمولات الجذاب للمنظمين والمصورين.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> مراقبة وإصلاح أي فجوة في سرعة الرد على العملاء المحتملين عبر الواتساب.</li>
+                        </ul>
+                    </div>
+                    <!-- Week 4 -->
+                    <div class="bg-white p-5 rounded-2xl border border-brand-beige hover:border-brand-gold shadow-sm transition-all">
+                        <span class="text-xs font-bold text-brand-gold tracking-widest uppercase block mb-1">الأسبوع 4 (الأيام 22-30)</span>
+                        <h4 class="font-bold text-brand-black text-sm mb-3">حصد مبيعات التجربة وتقييم خط الإنتاج</h4>
+                        <ul class="text-xs text-gray-600 space-y-2.5">
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> تأمين أول 5 طلبيات مؤكدة من خلال إحالات المصورين أو الطلبات العضوية على إنستقرام.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> تتبع دورة الإنتاج الفعلي: سرعة التصميم، توفر الخامات، وسرعة الشحن للمناطق المختلفة للتأكد من سلاسة العمل.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> توثيق تجربة العملاء الأوائل وطلب تقييمهم على خرائط جوجل لبدء بناء جدار الموثوقية البصري.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Month 2 Detailed View (Hidden by default) -->
+            <div id="month-plan-m2" class="month-content-block hidden space-y-6">
+                <div class="bg-brand-black text-brand-white p-4 rounded-2xl border-l-4 border-brand-gold mb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block mb-1">التركيز الأساسي للشهر الثاني:</span>
+                        <h3 class="text-lg font-bold text-brand-white">بناء الموثوقية العميقة وتأمين جودة المواد والشحن الآمن</h3>
+                    </div>
+                    <div class="bg-brand-blackLighter px-4 py-2 rounded-xl shadow-sm text-center border border-white/10">
+                        <span class="text-[10px] text-gray-400 uppercase tracking-wider block">الهدف المبيعاتي</span>
+                        <span class="text-lg font-bold text-brand-gold">15-20 طلبية مؤكدة</span>
+                    </div>
+                </div>
+
+                <!-- Weeks Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Week 5 -->
+                    <div class="bg-white p-5 rounded-2xl border border-brand-beige hover:border-brand-gold shadow-sm transition-all">
+                        <span class="text-xs font-bold text-brand-gold tracking-widest uppercase block mb-1">الأسبوع 5 (الأيام 31-37)</span>
+                        <h4 class="font-bold text-brand-black text-sm mb-3">إبراز جودة المواد الخام والتفاصيل</h4>
+                        <ul class="text-xs text-gray-600 space-y-2.5">
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> تصوير ونشر مقاطع تركز على جودة ملمس الورق وسمكه، والألوان الغنية، والخطوط البارزة.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> كشف عملية التطوير اليدوي وتأكيد تفرد كل لوحة تذكارية للعروسين.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> توفير خيارات إضافية من الورق الفاخر المعالج المقاوم للرطوبة ومرور السنين.</li>
+                        </ul>
+                    </div>
+                    <!-- Week 6 -->
+                    <div class="bg-white p-5 rounded-2xl border border-brand-beige hover:border-brand-gold shadow-sm transition-all">
+                        <span class="text-xs font-bold text-brand-gold tracking-widest uppercase block mb-1">الأسبوع 6 (الأيام 38-44)</span>
+                        <h4 class="font-bold text-brand-black text-sm mb-3">حملة كواليس التعبئة والشحن الآمن</h4>
+                        <ul class="text-xs text-gray-600 space-y-2.5">
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> صناعة محتوى يركز على طريقة التغليف المتينة لـ MauKeepsake (صندوق الحفظ، اللف المقاوم للصدمات).</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> بناء ثقة العميل من خارج المدينة بقدرة اللوحة على الوصول بشكل سليم تماماً دون أي تلفيات.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> تفعيل شراكات شحن موثوقة محلياً مع توفير رقم تتبع فوري للطلبات.</li>
+                        </ul>
+                    </div>
+                    <!-- Week 7 -->
+                    <div class="bg-white p-5 rounded-2xl border border-brand-beige hover:border-brand-gold shadow-sm transition-all">
+                        <span class="text-xs font-bold text-brand-gold tracking-widest uppercase block mb-1">الأسبوع 7 (الأيام 45-51)</span>
+                        <h4 class="font-bold text-brand-black text-sm mb-3">توسيع شبكة شركاء الإحالة النشطين</h4>
+                        <ul class="text-xs text-gray-600 space-y-2.5">
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> الوصول إلى 20 شريكاً إحالة نشطاً في قاعدة بياناتك والاتصال التلفوني المستمر بهم لتشجيعهم على الإحالة.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> تقديم هدايا تحفيزية مميزة للشركاء الأكثر تفاعلاً وإشراكهم في المجموعات الحصرية للحسومات الخاصة.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> رصد المشاكل أو المعوقات التي تواجه المصورين عند التوصية بـ MauKeepsake وحلها بشكل فوري.</li>
+                        </ul>
+                    </div>
+                    <!-- Week 8 -->
+                    <div class="bg-white p-5 rounded-2xl border border-brand-beige hover:border-brand-gold shadow-sm transition-all">
+                        <span class="text-xs font-bold text-brand-gold tracking-widest uppercase block mb-1">الأسبوع 8 (الأيام 52-60)</span>
+                        <h4 class="font-bold text-brand-black text-sm mb-3">بدء الإعلانات المدفوعة وقياس التفاعل</h4>
+                        <ul class="text-xs text-gray-600 space-y-2.5">
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> تفعيل أولى حملات Instagram Reels Ads بميزانية متزنة (1-2 مليون روبية) تركز حصراً على دفع المحادثات عبر الواتساب.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> تحليل أكثر الفيديوهات تفاعلاً من الشهر الأول واستخدامها كإعلانات رئيسية لجذب العرائس الباحثات عن الفخامة.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> تقييم وحساب العائد على الاستثمار الإعلاني وتصحيح العروض والباقات المقدمة لتقليل تكلفة حيازة العميل.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Month 3 Detailed View (Hidden by default) -->
+            <div id="month-plan-m3" class="month-content-block hidden space-y-6">
+                <div class="bg-brand-beigeLight p-4 rounded-2xl border-l-4 border-brand-gold mb-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block mb-1">التركيز الأساسي للشهر الثالث:</span>
+                        <h3 class="text-lg font-bold text-brand-black">إثبات الثقة المجتمعية وزيادة حجم التحويلات وتوسيع الانتشار</h3>
+                    </div>
+                    <div class="bg-white px-4 py-2 rounded-xl shadow-sm text-center">
+                        <span class="text-[10px] text-gray-400 uppercase tracking-wider block">الهدف المبيعاتي</span>
+                        <span class="text-lg font-bold text-brand-gold">30+ طلبية شهرياً مستقرة</span>
+                    </div>
+                </div>
+
+                <!-- Weeks Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Week 9 -->
+                    <div class="bg-white p-5 rounded-2xl border border-brand-beige hover:border-brand-gold shadow-sm transition-all">
+                        <span class="text-xs font-bold text-brand-gold tracking-widest uppercase block mb-1">الأسبوع 9 (الأيام 61-67)</span>
+                        <h4 class="font-bold text-brand-black text-sm mb-3">حشد ونشر التقييمات وقصص unboxing</h4>
+                        <ul class="text-xs text-gray-600 space-y-2.5">
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> الطلب الفعلي والمستمر لتقييمات وتصوير لحظات unboxing لعملائنا من الشهرين الأول والثاني.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> مشاركة لقطات شاشة (Screenshots) للمحادثات الدافئة وردود الأفعال المبهجة عبر الواتساب على منصات التواصل.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> بناء الثقة المكتسبة للعرائس الجدد الذين يتخوفون من الدفع المسبق لعلامات تجارية ناشئة.</li>
+                        </ul>
+                    </div>
+                    <!-- Week 10 -->
+                    <div class="bg-white p-5 rounded-2xl border border-brand-beige hover:border-brand-gold shadow-sm transition-all">
+                        <span class="text-xs font-bold text-brand-gold tracking-widest uppercase block mb-1">الأسبوع 10 (الأيام 68-74)</span>
+                        <h4 class="font-bold text-brand-black text-sm mb-3">إطلاق حملات الكولاب (Collab Posts)</h4>
+                        <ul class="text-xs text-gray-600 space-y-2.5">
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> البدء بنشر صور ومقاطع مشتركة (Collab Posts) مع كبار المصورين المتعاقد معهم لتظهر لوحاتنا في حساباتهم الضخمة.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> جذب زوار جدد ومهتمين بجودة استثنائية من المتابعين للمصورين مباشرة وبدون أي تكلفة إضافية.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> دمج منتج MauKeepsake كإكسسوار افتراضي فخم ضمن جلسات التصوير التي ينظمها كبار المصورين الشركاء.</li>
+                        </ul>
+                    </div>
+                    <!-- Week 11 -->
+                    <div class="bg-white p-5 rounded-2xl border border-brand-beige hover:border-brand-gold shadow-sm transition-all">
+                        <span class="text-xs font-bold text-brand-gold tracking-widest uppercase block mb-1">الأسبوع 11 (الأيام 75-81)</span>
+                        <h4 class="font-bold text-brand-black text-sm mb-3">تحسين الإعلانات ومقاييس التحويل</h4>
+                        <ul class="text-xs text-gray-600 space-y-2.5">
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> رفع ميزانية الإعلانات للفيديوهات التي حققت مبيعات فعلية في الشهر الثاني، مع وقف الإعلانات منخفضة الأداء.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> تحسين رحلة العميل على الواتساب لضمان اختصار الوقت بين المحادثة وإرسال تفاصيل وتاريخ الزواج والدفع.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> تدريب طاقم خدمة العملاء والبيع على إغلاق الصفقات وإقناع العملاء المترددين بالباقات الفاخرة المكملة.</li>
+                        </ul>
+                    </div>
+                    <!-- Week 12 -->
+                    <div class="bg-white p-5 rounded-2xl border border-brand-beige hover:border-brand-gold shadow-sm transition-all">
+                        <span class="text-xs font-bold text-brand-gold tracking-widest uppercase block mb-1">الأسبوع 12 (الأيام 82-90)</span>
+                        <h4 class="font-bold text-brand-black text-sm mb-3">مكافأة أفضل شركاء النجاح وتحقيق الاستقرار</h4>
+                        <ul class="text-xs text-gray-600 space-y-2.5">
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> تقديم جوائز وعمولات مميزة أو باقات MauKeepsake مجانية لكبار شركاء النجاح تعزيزاً لعلاقات العمل طويلة الأمد.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> الوصول بالطلبات الشهرية إلى 30+ طلبية ثابتة كحالة عمل مستدامة ومربحة بشكل دائم.</li>
+                            <li class="flex items-start gap-2"><i class="fas fa-check text-brand-gold shrink-0 mt-0.5"></i> بدء التجهيز والتخطيط لحملة الربع السنوي الثاني والتوسع في مدن ومقاطعات إندونيسية جديدة.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Gamified 90-Day Milestone Checkpoints (Interactive Tracking) -->
+        <section class="bg-brand-black text-brand-white p-6 md:p-8 rounded-3xl mb-12 shadow-md border border-brand-gold/20">
+            <div class="max-w-3xl mx-auto text-center mb-8">
+                <span class="text-xs font-extrabold text-brand-gold tracking-widest uppercase bg-brand-black border border-brand-gold px-3 py-1 rounded-full">نظام القياس والمتابعة الميداني</span>
+                <h2 class="text-2xl md:text-3xl font-bold mt-3 mb-2">متتبع إنجاز الخطة التفاعلي (12 علامة نجاح حاسمة)</h2>
+                <p class="text-xs text-gray-300 leading-relaxed">
+                    حدد المهام التي قمت بإكمالها لمراقبة نسبة جاهزيتك واقترابك من تسيير خط الإنتاج المستدام والمبيعات المتدفقة يوماً بعد يوم.
+                </p>
+            </div>
+
+            <!-- Tracker Checklist Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                <!-- Checkpoint 1 -->
+                <label class="bg-brand-blackLighter p-4 rounded-xl border border-white/10 hover:border-brand-gold flex gap-3 cursor-pointer items-start select-none transition-all">
+                    <input type="checkbox" class="milestone-box w-5 h-5 accent-brand-gold rounded mt-0.5" onchange="calculateMilestoneProgress()">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block">تهيئة القنوات والكاتالوج</span>
+                        <p class="text-[10px] text-gray-400 mt-0.5">إعداد ملفات Instagram و TikTok وقنوات WhatsApp بكامل معلومات الأسعار والمنتجات بشكل فخم وجذاب.</p>
+                    </div>
+                </label>
+                <!-- Checkpoint 2 -->
+                <label class="bg-brand-blackLighter p-4 rounded-xl border border-white/10 hover:border-brand-gold flex gap-3 cursor-pointer items-start select-none transition-all">
+                    <input type="checkbox" class="milestone-box w-5 h-5 accent-brand-gold rounded mt-0.5" onchange="calculateMilestoneProgress()">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block">تفعيل خرائط جوجل</span>
+                        <p class="text-[10px] text-gray-400 mt-0.5">توثيق وإطلاق ملف نشاطك التجاري على خرائط جوجل (GBP) لضمان المصداقية وبدء حشد مراجعات الشركاء والعملاء.</p>
+                    </div>
+                </label>
+                <!-- Checkpoint 3 -->
+                <label class="bg-brand-blackLighter p-4 rounded-xl border border-white/10 hover:border-brand-gold flex gap-3 cursor-pointer items-start select-none transition-all">
+                    <input type="checkbox" class="milestone-box w-5 h-5 accent-brand-gold rounded mt-0.5" onchange="calculateMilestoneProgress()">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block">10 شركاء إحالة نشطين</span>
+                        <p class="text-[10px] text-gray-400 mt-0.5">التوقيع وبناء شراكات حقيقية مع أول 10 من كبار مصوري الأفراح ومنظمي الأعراس ليوصوا بمنتجاتك بحماس لزبائنهم.</p>
+                    </div>
+                </label>
+                <!-- Checkpoint 4 -->
+                <label class="bg-brand-blackLighter p-4 rounded-xl border border-white/10 hover:border-brand-gold flex gap-3 cursor-pointer items-start select-none transition-all">
+                    <input type="checkbox" class="milestone-box w-5 h-5 accent-brand-gold rounded mt-0.5" onchange="calculateMilestoneProgress()">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block">إرسال اللوحات المجانية للشركاء</span>
+                        <p class="text-[10px] text-gray-400 mt-0.5">تجهيز وإرسال لوحات عينات وعرض فخمة ومميزة ليتم استخدامها في جلسات التصوير أو تزيين مكاتب الشركاء.</p>
+                    </div>
+                </label>
+                <!-- Checkpoint 5 -->
+                <label class="bg-brand-blackLighter p-4 rounded-xl border border-white/10 hover:border-brand-gold flex gap-3 cursor-pointer items-start select-none transition-all">
+                    <input type="checkbox" class="milestone-box w-5 h-5 accent-brand-gold rounded mt-0.5" onchange="calculateMilestoneProgress()">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block">حصد أول 5 مبيعات</span>
+                        <p class="text-[10px] text-gray-400 mt-0.5">تحقيق أولى مبيعاتك بنجاح من خلال ركيزة شركاء الإحالة المحفزين أو التفاعل العضوي والوعي المسبق بالبراند.</p>
+                    </div>
+                </label>
+                <!-- Checkpoint 6 -->
+                <label class="bg-brand-blackLighter p-4 rounded-xl border border-white/10 hover:border-brand-gold flex gap-3 cursor-pointer items-start select-none transition-all">
+                    <input type="checkbox" class="milestone-box w-5 h-5 accent-brand-gold rounded mt-0.5" onchange="calculateMilestoneProgress()">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block">أول فيديو تصنيع واسع الانتشار</span>
+                        <p class="text-[10px] text-gray-400 mt-0.5">صناعة ونشر مقطع ترانزيت أو behind the scenes للوحتك يحقق تراكماً تفاعلياً مميزاً على المنصات الرقمية.</p>
+                    </div>
+                </label>
+                <!-- Checkpoint 7 -->
+                <label class="bg-brand-blackLighter p-4 rounded-xl border border-white/10 hover:border-brand-gold flex gap-3 cursor-pointer items-start select-none transition-all">
+                    <input type="checkbox" class="milestone-box w-5 h-5 accent-brand-gold rounded mt-0.5" onchange="calculateMilestoneProgress()">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block">تفعيل الشحن وتأمين التغليف</span>
+                        <p class="text-[10px] text-gray-400 mt-0.5">استقرار واختبار كواليس التغليف المتين، وتوثيق عدم قابلية التلفيات عبر الشحن البري والجوي للمحافظات البعيدة.</p>
+                    </div>
+                </label>
+                <!-- Checkpoint 8 -->
+                <label class="bg-brand-blackLighter p-4 rounded-xl border border-white/10 hover:border-brand-gold flex gap-3 cursor-pointer items-start select-none transition-all">
+                    <input type="checkbox" class="milestone-box w-5 h-5 accent-brand-gold rounded mt-0.5" onchange="calculateMilestoneProgress()">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block">حملة الإعلانات الأولى الناجحة</span>
+                        <p class="text-[10px] text-gray-400 mt-0.5">إطلاق إعلانات ريلز إنستغرام بميزانية مستهدفة ومراقبة التكاليف المخصصة لإجراء كل مكالمة تواصل على الواتساب.</p>
+                    </div>
+                </label>
+                <!-- Checkpoint 9 -->
+                <label class="bg-brand-blackLighter p-4 rounded-xl border border-white/10 hover:border-brand-gold flex gap-3 cursor-pointer items-start select-none transition-all">
+                    <input type="checkbox" class="milestone-box w-5 h-5 accent-brand-gold rounded mt-0.5" onchange="calculateMilestoneProgress()">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block">تأمين مراجعات unboxing الحقيقية</span>
+                        <p class="text-[10px] text-gray-400 mt-0.5">حصد ونشر 5 فيديوهات حقيقية للعرائس وهنّ يقمنّ بفتح صناديق التذكار بسعادة لإظهار الموثوقية العميقة.</p>
+                    </div>
+                </label>
+                <!-- Checkpoint 10 -->
+                <label class="bg-brand-blackLighter p-4 rounded-xl border border-white/10 hover:border-brand-gold flex gap-3 cursor-pointer items-start select-none transition-all">
+                    <input type="checkbox" class="milestone-box w-5 h-5 accent-brand-gold rounded mt-0.5" onchange="calculateMilestoneProgress()">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block">منشور كولاب مع مصور متميز</span>
+                        <p class="text-[10px] text-gray-400 mt-0.5">إطلاق ونشر أول Collab Post مشترك مع كبار المصورين محققاً تفاعلاً وحيازة عملاء مجانية مذهلة ومباشرة.</p>
+                    </div>
+                </label>
+                <!-- Checkpoint 11 -->
+                <label class="bg-brand-blackLighter p-4 rounded-xl border border-white/10 hover:border-brand-gold flex gap-3 cursor-pointer items-start select-none transition-all">
+                    <input type="checkbox" class="milestone-box w-5 h-5 accent-brand-gold rounded mt-0.5" onchange="calculateMilestoneProgress()">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block">20 شريكاً إحالة فعالاً</span>
+                        <p class="text-[10px] text-gray-400 mt-0.5">توسيع محفظتك للوصول لـ 20 شريكاً نشطاً يرسلون لك بانتظام إحالات من العرائس الجدد بشكل مستمر.</p>
+                    </div>
+                </label>
+                <!-- Checkpoint 12 -->
+                <label class="bg-brand-blackLighter p-4 rounded-xl border border-white/10 hover:border-brand-gold flex gap-3 cursor-pointer items-start select-none transition-all">
+                    <input type="checkbox" class="milestone-box w-5 h-5 accent-brand-gold rounded mt-0.5" onchange="changeTopPartnerHighlight(this)">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block">30 طلبية مبيعات مستقرة</span>
+                        <p class="text-[10px] text-gray-400 mt-0.5">بلوغ هدف الاستقرار المالي المتمثل في تأمين 30+ طلبية مؤكدة شهرياً وتعميم أرباح خط الإنتاج المميزة.</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- Milestone Progress Bar Indicator -->
+            <div class="flex flex-col sm:flex-row justify-between items-center bg-brand-blackLighter p-4 rounded-xl border border-white/5 gap-3 text-center sm:text-left">
+                <span class="text-xs text-gray-300">
+                    معدل جاهزية ونمو خطة الـ 90 يوماً الخاصة بمشروعك: <strong id="milestone-text" class="text-brand-gold">0 / 12</strong> (معدل تقدم: <span id="milestone-percent">0%</span>)
+                </span>
+                <div class="w-full sm:w-1/2 bg-white/10 rounded-full h-3 overflow-hidden border border-white/5">
+                    <div id="milestone-bar" class="bg-brand-gold h-full w-0 transition-all duration-300"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Interactive Revenue & KPI Simulator -->
+        <section class="bg-white p-6 md:p-8 rounded-3xl shadow-sm border border-brand-beige mb-12">
+            <div class="text-center md:text-right mb-6">
+                <span class="text-xs font-bold text-brand-black bg-brand-beige px-3 py-1 rounded-full uppercase">أدوات التخطيط وحساب الأرباح</span>
+                <h2 class="text-2xl font-bold text-brand-black mt-2">محاكي توقع المبيعات والأرباح لـ MauKeepsake (بالروبية الإندونيسية IDR)</h2>
+                <p class="text-sm text-gray-500 mt-1">قم بتعديل قيم الشركاء النشطين ومعدلات التحويل وحجم الأسعار لمعاينة إيرادات مشروعك الفعلي يوماً بعد يوم.</p>
+            </div>
+
+            <!-- Simulator Container -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Sliders Controls -->
+                <div class="bg-brand-beigeLight p-5 rounded-2xl border border-brand-beige lg:col-span-1 space-y-4">
+                    <div>
+                        <label class="text-xs font-bold text-brand-black flex justify-between mb-1">
+                            <span>عدد شركاء النجاح النشطين:</span>
+                            <span id="partner-val" class="text-brand-gold font-bold">15 شريك</span>
+                        </label>
+                        <input type="range" id="partners-range" min="5" max="50" value="15" step="1" oninput="runFinancialSimulation()" class="w-full accent-brand-gold">
+                    </div>
+
+                    <div>
+                        <label class="text-xs font-bold text-brand-black flex justify-between mb-1">
+                            <span>معدل الإحالات الشهري لكل شريك:</span>
+                            <span id="referral-val" class="text-brand-black font-bold">2 إحالة</span>
+                        </label>
+                        <input type="range" id="referrals-range" min="1" max="10" value="2" step="1" oninput="runFinancialSimulation()" class="w-full accent-brand-gold">
+                    </div>
+
+                    <div>
+                        <label class="text-xs font-bold text-brand-black flex justify-between mb-1">
+                            <span>متوسط سعر الباقة المبيعة (IDR):</span>
+                            <span id="price-val" class="text-brand-black font-bold">Rp 650.000</span>
+                        </label>
+                        <input type="range" id="price-range" min="300000" max="1500000" value="650000" step="50000" oninput="runFinancialSimulation()" class="w-full accent-brand-gold">
+                    </div>
+
+                    <div>
+                        <label class="text-xs font-bold text-brand-black flex justify-between mb-1">
+                            <span>معدل تحويل الإحالات إلى مبيعات:</span>
+                            <span id="conversion-val" class="text-emerald-700 font-bold">50%</span>
+                        </label>
+                        <input type="range" id="conversion-range" min="10" max="100" value="50" step="5" oninput="runFinancialSimulation()" class="w-full accent-brand-gold">
+                    </div>
+                </div>
+
+                <!-- Simulation Output -->
+                <div class="bg-brand-black text-brand-white p-6 rounded-2xl lg:col-span-2 flex flex-col justify-between border border-brand-gold/30">
+                    <div>
+                        <h4 class="text-sm font-bold text-brand-gold mb-4 border-b border-white/10 pb-2"><i class="fas fa-chart-line mr-1"></i> التوقعات المالية ومعدلات التطور الشهري للـ 90 يوماً</h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+                            <div class="bg-brand-blackLighter p-4 rounded-xl border border-white/5">
+                                <span class="text-[10px] text-gray-400 uppercase tracking-wider block">إجمالي الإحالات الواردة</span>
+                                <span id="out-total-referrals" class="text-xl font-bold text-brand-gold block mt-1">30 إحالة</span>
+                            </div>
+                            <div class="bg-brand-blackLighter p-4 rounded-xl border border-white/5">
+                                <span class="text-[10px] text-gray-400 uppercase tracking-wider block">المبيعات المؤكدة والمكتملة</span>
+                                <span id="out-sales-count" class="text-xl font-bold text-white block mt-1">15 طلبية</span>
+                            </div>
+                            <div class="bg-brand-blackLighter p-4 rounded-xl border border-white/5">
+                                <span class="text-[10px] text-gray-400 uppercase tracking-wider block">إجمالي الأرباح والإيرادات المتوقعة</span>
+                                <span id="out-total-revenue" class="text-xl font-bold text-brand-gold block mt-1">Rp 9.750.000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Strategic Advice -->
+                    <div class="mt-6 pt-4 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-3">
+                        <p class="text-xs text-gray-300 leading-normal text-justify sm:w-3/4">
+                            💡 <strong>توصية حاسمة:</strong> تهدف خطة الـ 90 يوماً إلى الوصول تدريجياً لـ 30 شريكاً نشطاً لضمان استقرار الإنتاج وتدفق المبيعات اليومية بشكل دائم ومربح دون أي تخوفات من تقلبات السوق.
+                        </p>
+                        <div class="bg-brand-gold text-brand-black font-bold text-xs px-3 py-1.5 rounded-lg shrink-0">
+                            استراتيجية مستدامة وعالية الربحية
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Interactive Daily Priority Checklist (Real-time Utility) -->
+        <section class="bg-brand-beigeLight p-6 md:p-8 rounded-3xl shadow-sm border border-brand-beige mb-12">
+            <div class="text-center md:text-right mb-6">
+                <span class="text-xs font-bold text-brand-gold bg-brand-black px-3 py-1 rounded-full uppercase">قائمة المهام اليومية</span>
+                <h2 class="text-2xl font-bold text-brand-black mt-2">متتبع الأولويات والمهام اليومية البسيطة والعملية</h2>
+                <p class="text-sm text-gray-500 mt-1">قم بتحديد وإنجاز مهامك اليومية لتحسين أداء نمو مشروعك وبناء شبكة علاقات متكاملة.</p>
+            </div>
+
+            <!-- Tasks Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                <!-- Task 1 -->
+                <label class="bg-white p-4 rounded-xl border border-brand-beige hover:border-brand-gold flex gap-3 cursor-pointer items-start select-none transition-all">
+                    <input type="checkbox" class="task-checkbox w-5 h-5 accent-brand-gold rounded mt-0.5" onchange="toggleTaskCard(this)">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block">التواصل مع المصورين</span>
+                        <p class="text-xs text-gray-700 font-medium mt-0.5">التواصل وإجراء محادثات مهنية مميزة مع 5 مصورين محليين جدد لتقديم خدماتك.</p>
+                    </div>
+                </label>
+                <!-- Task 2 -->
+                <label class="bg-white p-4 rounded-xl border border-brand-beige hover:border-brand-gold flex gap-3 cursor-pointer items-start select-none transition-all">
+                    <input type="checkbox" class="task-checkbox w-5 h-5 accent-brand-gold rounded mt-0.5" onchange="toggleTaskCard(this)">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block">التواصل مع منظمي WO</span>
+                        <p class="text-xs text-gray-700 font-medium mt-0.5">التواصل المباشر مع 5 منظمي حفلات (WO) لإرسال كتالوج خدماتك المحدث إليهم.</p>
+                    </div>
+                </label>
+                <!-- Task 3 -->
+                <label class="bg-white p-4 rounded-xl border border-brand-beige hover:border-brand-gold flex gap-3 cursor-pointer items-start select-none transition-all">
+                    <input type="checkbox" class="task-checkbox w-5 h-5 accent-brand-gold rounded mt-0.5" onchange="toggleTaskCard(this)">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block">نشر المحتوى اليومي</span>
+                        <p class="text-xs text-gray-700 font-medium mt-0.5">رفع مقطع فيديو ريلز واحد عالي الدقة، ونشر قصتين تفاعليتين على الأقل اليوم.</p>
+                    </div>
+                </label>
+                <!-- Task 4 -->
+                <label class="bg-white p-4 rounded-xl border border-brand-beige hover:border-brand-gold flex gap-3 cursor-pointer items-start select-none transition-all">
+                    <input type="checkbox" class="task-checkbox w-5 h-5 accent-brand-gold rounded mt-0.5" onchange="toggleTaskCard(this)">
+                    <div>
+                        <span class="text-xs font-bold text-brand-gold block">متابعة محادثات الواتساب</span>
+                        <p class="text-xs text-gray-700 font-medium mt-0.5">الرد الفوري واللبق على كافة الاستفسارات، ومتابعة العملاء والشركاء الأقرب للطلب.</p>
+                    </div>
+                </label>
+            </div>
+
+            <!-- Task Counter -->
+            <div class="mt-6 flex flex-col sm:flex-row justify-between items-center bg-white p-4 rounded-xl border border-brand-beige gap-3 text-center sm:text-left">
+                <span class="text-xs text-gray-600">
+                    معدل تقدمك وإنجاز مهام اليوم الفعلي: <strong id="progress-text" class="text-brand-gold">0 / 4</strong>
+                </span>
+                <div class="w-full sm:w-1/2 bg-gray-100 rounded-full h-3 overflow-hidden">
+                    <div id="progress-bar" class="bg-brand-gold h-full w-0 transition-all duration-300"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-brand-black text-brand-white py-10 px-4 text-center border-t border-brand-gold/20 mt-12">
+        <div class="container mx-auto max-w-4xl">
+            <span class="elegant-title text-brand-gold text-2xl font-bold tracking-widest block mb-2">MauKeepsake</span>
+            <p class="text-xs text-gray-300 max-w-xl mx-auto leading-relaxed mb-6 text-center">
+                تخليد التفاصيل والذكريات السعيدة لليلة العمر يدوياً وبخامات فائقة الجودة تدوم لسنوات طويلة دون أن تفقد بريقها الملكي الفاخر.
+            </p>
+            <div class="text-[10px] text-gray-500">
+                &copy; 2026 MauKeepsake 90-Day Launch Plan. جميع الحقوق محفوظة لعلامة MauKeepsake الفاخرة لعام 2026.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Script Layer -->
+    <script>
+        // Interactive Monthly Plan Tab Switcher
+        function switchMonthPlan(monthId) {
+            // Remove active style from all tab buttons
+            document.querySelectorAll('.month-tab-btn').forEach(btn => {
+                btn.classList.remove('bg-brand-black', 'text-brand-white', 'active');
+                btn.classList.add('text-gray-600', 'hover:text-brand-black');
+            });
+
+            // Add active styles to clicked tab
+            const activeBtn = document.getElementById(`m-btn-${monthId}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('text-gray-600', 'hover:text-brand-black');
+                activeBtn.classList.add('bg-brand-black', 'text-brand-white', 'active');
+            }
+
+            // Hide all month content blocks
+            document.querySelectorAll('.month-content-block').forEach(block => {
+                block.classList.add('hidden');
+                block.classList.remove('block');
+            });
+
+            // Show current month content block
+            const currentBlock = document.getElementById(`month-plan-${monthId}`);
+            if (currentBlock) {
+                currentBlock.classList.remove('hidden');
+                currentBlock.classList.add('block');
+            }
+        }
+
+        // Daily Checklist Task Handler
+        function toggleTaskCard(checkbox) {
+            const card = checkbox.closest('label');
+            if (checkbox.checked) {
+                card.classList.add('bg-brand-beige/30', 'border-brand-gold');
+            } else {
+                card.classList.remove('bg-brand-beige/30', 'border-brand-gold');
+            }
+            updateDailyProgressBar();
+        }
+
+        // Daily Progress Bar Visual Calculator
+        function updateDailyProgressBar() {
+            const checkboxes = document.querySelectorAll('.task-checkbox');
+            const totalTasks = checkboxes.length;
+            let completedTasks = 0;
+
+            checkboxes.forEach(box => {
+                if (box.checked) completedTasks++;
+            });
+
+            const progressPercentage = (completedTasks / totalTasks) * 100;
+            const progressBar = document.getElementById('progress-bar');
+            const progressText = document.getElementById('progress-text');
+
+            if (progressBar && progressText) {
+                progressBar.style.width = `${progressPercentage}%`;
+                progressText.innerText = `${completedTasks} / ${totalTasks}`;
+            }
+        }
+
+        // 90-Day Milestone Tracker Visual Calculator
+        function calculateMilestoneProgress() {
+            const checkboxes = document.querySelectorAll('.milestone-box');
+            const totalCheckpoints = checkboxes.length;
+            let completedCheckpoints = 0;
+
+            checkboxes.forEach(box => {
+                const textContainer = box.nextElementSibling;
+                if (box.checked) {
+                    completedCheckpoints++;
+                    if (textContainer) textContainer.classList.add('milestone-checked');
+                } else {
+                    if (textContainer) textContainer.classList.remove('milestone-checked');
+                }
+            });
+
+            const progressPercentage = Math.round((completedCheckpoints / totalCheckpoints) * 100);
+            const progressBar = document.getElementById('milestone-bar');
+            const progressText = document.getElementById('milestone-text');
+            const progressPercentText = document.getElementById('milestone-percent');
+
+            if (progressBar && progressText && progressPercentText) {
+                progressBar.style.width = `${progressPercentage}%`;
+                progressText.innerText = `${completedCheckpoints} / ${totalCheckpoints}`;
+                progressPercentText.innerText = `${progressPercentage}%`;
+            }
+        }
+
+        // Dummy helper for checking off top milestones
+        function changeTopPartnerHighlight(box) {
+            calculateMilestoneProgress();
+        }
+
+        // Financial & KPI Simulator Calculator
+        function runFinancialSimulation() {
+            const partners = parseInt(document.getElementById('partners-range').value);
+            const referralsPerPartner = parseInt(document.getElementById('referrals-range').value);
+            const packagePrice = parseInt(document.getElementById('price-range').value);
+            const conversionRate = parseInt(document.getElementById('conversion-range').value) / 100;
+
+            // Update range indicators
+            document.getElementById('partner-val').innerText = `${partners} شريك نشط`;
+            document.getElementById('referral-val').innerText = `${referralsPerPartner} إحالة / شريك`;
+            document.getElementById('price-val').innerText = `Rp ${packagePrice.toLocaleString('id-ID')}`;
+            document.getElementById('conversion-val').innerText = `${(conversionRate * 100)}%`;
+
+            // Core Math
+            const totalIncomingReferrals = partners * referralsPerPartner;
+            const completedSales = Math.round(totalIncomingReferrals * conversionRate);
+            const totalRevenue = completedSales * packagePrice;
+
+            // Render Output
+            document.getElementById('out-total-referrals').innerText = `${totalIncomingReferrals} إحالة`;
+            document.getElementById('out-sales-count').innerText = `${completedSales} طلبية`;
+            document.getElementById('out-total-revenue').innerText = `Rp ${totalRevenue.toLocaleString('id-ID')}`;
+        }
+
+        // Initialize simulator and trackers on page load
+        window.onload = function() {
+            runFinancialSimulation();
+            calculateMilestoneProgress();
+            updateDailyProgressBar();
+        }
+    </script>
+</body>
+</html>
